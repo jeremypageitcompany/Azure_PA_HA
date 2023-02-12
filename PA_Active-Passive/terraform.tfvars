@@ -1,4 +1,4 @@
-project       = "paloha"
+project       = "paactivepassive"
 location      = "canadacentral"
 env           = "lab"
 public_ip_sku = "Standard"
