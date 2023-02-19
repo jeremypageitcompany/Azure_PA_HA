@@ -73,18 +73,18 @@ resource "azurerm_network_security_group" "nsg-002" {
 
   security_rule = [{
     access                                     = "Allow"
-    description                                = "AllowInboundHome"
+    description                                = "AllowInbounTest"
     destination_address_prefix                 = "*"
     destination_port_range                     = ""
     direction                                  = "Inbound"
-    name                                       = "AllowInboundSSHhome"
+    name                                       = "AllowInboundTest"
     priority                                   = 100 # between 100 - 4096
     protocol                                   = "Tcp"
     source_address_prefix                      = "${chomp(data.http.myip.response_body)}"
     source_port_range                          = "*"
     destination_address_prefixes               = []
     destination_application_security_group_ids = []
-    destination_port_ranges                    = ["443"]
+    destination_port_ranges                    = ["8000"]
     source_address_prefixes                    = []
     source_application_security_group_ids      = []
     source_port_ranges                         = []

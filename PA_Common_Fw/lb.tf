@@ -41,8 +41,8 @@ resource "azurerm_lb_rule" "lb-public-rule-001" {
   name                           = "lb_public_rule-${var.project}-${var.env}-${var.location}"
   loadbalancer_id                = azurerm_lb.lb-public-001.id
   protocol                       = "Tcp"
-  frontend_port                  = 443
-  backend_port                   = 443
+  frontend_port                  = 8000
+  backend_port                   = 8000
   frontend_ip_configuration_name = azurerm_lb.lb-public-001.frontend_ip_configuration[0].name
   backend_address_pool_ids       = [azurerm_lb_backend_address_pool.lb-public-backend-001.id]
   probe_id                       = azurerm_lb_probe.lb-public-probe-001.id
